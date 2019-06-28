@@ -344,9 +344,13 @@ footer {
 	background: rgba(0,0,0,0.8);
 }
 
+.footer-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
 footer ul {
 	margin-top: 30px;
-	margin-left: 120px;
 	text-transform: uppercase;
 	font-size: 12px;
 	line-height: 25px;
@@ -407,11 +411,100 @@ footer span{
 
 #newsletter input{
 	margin: 20px 0 10px 0;
-	padding: 10px 100px 10px 10px;
-	border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 300px;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 
+
+.footer-info{
+	justify-self: left;
+}
+
+.footer-social{
+	justify-self: left;
+}
+
+.newsletter{
+	justify-self: right;
+}
+
+
+@media only screen and (max-width : 1366px) {
+
+	/* #search {
+		padding: 0;
+		float: none;
+		padding-bottom: 40px;
+		margin-right: 0;
+	} */
+
+	.brands{
+		display: none;
+	}
+
+	.footer-content{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.footer-about{
+	
+		justify-self: left;
+	}
+
+
+
+	.footer-info{
+
+		justify-self: center;
+	}
+
+	.footer-social{
+
+		justify-self: end;
+	}
+
+	.newsletter{
+		justify-self: center;
+		grid-column: 1/-1;
+	}
+	
+		
+}
+
+
+@media only screen and (max-width : 768px) {
+
+	.footer-content{
+		width: 90%;
+		margin: 0 auto;
+		grid-template-columns: 1fr;
+	}
+
+	.footer-about{
+		width: 135px;
+		margin: 0 auto;
+		justify-self: center;
+	}
+
+	.footer-info{
+		width: 135px;
+		margin: 0 auto;
+		justify-self: center;
+	}
+
+	.newsletter{
+		grid-column: 1;
+	}
+
+
+	
+	
+		
+}
 /*-- HERO BUTTONS --*/
 
 
@@ -545,13 +638,13 @@ footer  {
 footer  ul{
 	margin-left: 0; 
 	float: left;
-	margin-right: 120px;
+	
 }
 
-.newsletter{
-	text-align: center;
-	float: right;
-}
+
+
+
+
 
 }
 
@@ -725,7 +818,7 @@ article {
 img.cat-review-stars {
 	width: 30%;
 	position: absolute;
-	bottom: 100px;
+	bottom: 115px;
 	right: 18px;
 }
 
@@ -768,6 +861,7 @@ img.cat-review-stars {
 /*----------------------------------MEDIA Q-----------------------------------*/
 
 
+
 /* small desktop */
 @media only screen and (min-width : 768px) {
 
@@ -798,9 +892,6 @@ article {
 	flex-basis: 33.333%;
 }
 
-.select {
-	margin-left: 60px;
-}
 
 .select a{
 	padding-right: 162px;
@@ -819,6 +910,71 @@ img.cat-review-stars {
 }
 
 }
+
+
+@media only screen and (min-width : 769px) {
+
+	.select {
+		margin-left: 0px;
+	}
+	
+	
+
+}
+
+
+@media only screen and (min-width : 1100px) {
+
+	.select {
+		margin-left: 60px;
+	}
+	
+	
+
+}
+
+
+
+
+@media only screen and (max-width : 1100px) {
+
+
+
+	aside {
+		padding: 0;
+		margin-top: 30px;
+		float: left;
+		width: 100%;
+	}
+
+	article {
+		margin-top: 40px;
+		float: left;
+		width: 100%;
+		padding-left: 0px;
+	}
+	
+
+	.product-tile {
+		padding-left: 0px;
+		padding: 10px;
+		flex-basis:50%;
+	}
+
+	
+
+}
+
+
+
+@media only screen and (max-width : 1366px) {
+
+	.product-tile {
+		flex-basis:50%;
+	}
+
+}
+
 
 /*----------------------- CATEGORY END -----------------------*/
 
